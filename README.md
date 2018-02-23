@@ -9,3 +9,9 @@ python pywait.py string-check --string "Service started" --url "http://whatever.
 
 ## Using connection
 python pywait.py connection --spec tcp:some_service:3306 --spec udp:some_other_service:3306
+
+## Customize timeouts, retries and exit code errors
+python pywait.py --retries 15 --timeout 6 --exit-code 124 connection --spec tcp:some_service:3306
+
+## Quiet any output
+python pywait.py --quiet connection --spec tcp:some_service:3306
