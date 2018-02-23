@@ -47,6 +47,9 @@ def valid_connection_spec(connection_spec):
 
     if spec_parts[0] not in valid_protocol_specs:
         raise ValueError('Invalid spec. Protocol should any of ' + ' '.join(valid_protocol_specs))
+        
+    if spec_parts[2] > 65535:
+        raise ValueError('Invalid port spec.')
 
     return tuple(spec_parts)
 
