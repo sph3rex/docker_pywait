@@ -5,11 +5,14 @@ import re
 import sys
 import time
 import socket
-from pprint import pprint
-from urllib.request import urlopen
 from contextlib import closing
 
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
 
+   
 def log(message):
     if not args.quiet:
         print(message)
