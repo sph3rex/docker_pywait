@@ -1,6 +1,7 @@
 # docker_pywait
 
-A wait script written in python for docker/docker-compose services:
+A wait script written in python for docker/docker-compose services
+Tested for now only with python 3.6
 
 # Usage
 
